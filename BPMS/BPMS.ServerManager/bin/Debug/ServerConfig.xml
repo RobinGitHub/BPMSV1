@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServerConfig>
+  <DBConfig>
+    <Server></Server>
+    <Database></Database>
+    <UID></UID>
+    <PWD></PWD> 
+  </DBConfig>
+  <ServicesConfig>
+    <Binding>wsHttpBinding</Binding>
+    <IP>localhost</IP>
+    <Port>13131</Port>
+    <UpdatePort>13132</UpdatePort>
+  </ServicesConfig>
+  <SuperAccount>
+    <Account>SuperAdmin</Account>
+    <Password>0B28A5799A32C687DAD2C5183718CEAC</Password>
+  </SuperAccount>
+</ServerConfig>
