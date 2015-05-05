@@ -7,4 +7,3 @@ E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.ViewModels.UnitTest\bin\Debug\BPMS.Vi
 E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.ViewModels.UnitTest\bin\Debug\BPMS.ViewModels.UnitTest.pdb
 E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.ViewModels.UnitTest\obj\Debug\BPMS.ViewModels.UnitTest.dll
 E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.ViewModels.UnitTest\obj\Debug\BPMS.ViewModels.UnitTest.pdb
-E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.ViewModels.UnitTest\obj\Debug\BPMS.ViewModels.UnitTest.csprojResolveAssemblyReference.cache

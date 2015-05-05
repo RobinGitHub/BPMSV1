@@ -22,3 +22,4 @@ E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.Common\bin\Debug\Microsoft.Practices.
 E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.Common\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.Common\obj\Debug\BPMS.Common.dll
 E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.Common\obj\Debug\BPMS.Common.pdb
+E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.Common\obj\Debug\BPMS.Common.csprojResolveAssemblyReference.cache
