@@ -1,0 +1,5 @@
+E:\Robin\Desktop\BPMS\BPMS.ViewModels.UnitTest\bin\Debug\BPMS.ViewModels.UnitTest.dll
+E:\Robin\Desktop\BPMS\BPMS.ViewModels.UnitTest\bin\Debug\BPMS.ViewModels.UnitTest.pdb
+E:\Robin\Desktop\BPMS\BPMS.ViewModels.UnitTest\obj\Debug\BPMS.ViewModels.UnitTest.csprojResolveAssemblyReference.cache
+E:\Robin\Desktop\BPMS\BPMS.ViewModels.UnitTest\obj\Debug\BPMS.ViewModels.UnitTest.dll
+E:\Robin\Desktop\BPMS\BPMS.ViewModels.UnitTest\obj\Debug\BPMS.ViewModels.UnitTest.pdb

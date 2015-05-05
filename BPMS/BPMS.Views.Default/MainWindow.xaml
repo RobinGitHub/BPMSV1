@@ -1,0 +1,126 @@
+﻿<dx:DXWindow
+    x:Class="BPMS.Views.Default.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:BPMS.Views.Default"
+    xmlns:src="clr-namespace:BPMS.Model;assembly=BPMS.Model"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    Title="通用权限管理系统" Height="600" Width="800"
+    SnapsToDevicePixels="True" UseLayoutRounding="True"
+    WindowStartupLocation="CenterScreen"
+    Style="{StaticResource ResourceKey=WindowStyle}"
+    >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/HomeStyle.xaml" />
+                <ResourceDictionary Source="Themes/ListBoxStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <DockPanel >
+        <!--状态栏-->
+        <Grid DockPanel.Dock="Bottom" Height="23" Background="#F7F7F7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="120*" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="版本 V1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Separator  Grid.Column="0" Style="{StaticResource separatorStyle}" />
+            <TextBlock Text="CopyRight © 2014-2050 By Robin" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Separator  Grid.Column="1" Style="{StaticResource separatorStyle}" />
+            <WrapPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="操作员 "  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="txtLoginUser" Text="管理员"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </WrapPanel>
+            <Separator  Grid.Column="2" Style="{StaticResource separatorStyle}" />
+            <WrapPanel Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="所在部门 "  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="txtDept" Text="IT信息部"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </WrapPanel>
+            <Separator  Grid.Column="3" Style="{StaticResource separatorStyle}" />
+
+            <WrapPanel Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="在线人数 "  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="txtOnLineTotal" Text="1"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </WrapPanel>
+        </Grid>
+        <!--顶部-->
+        <Grid DockPanel.Dock="Top" Height="75" VerticalAlignment="Top" Background="#1E71B1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="76" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="通用权限管理系统" Grid.Column="0" FontSize="36" FontWeight="Bold" HorizontalAlignment="Left" Margin=" 20, 0, 0, 0" VerticalAlignment="Center" Foreground="White" />
+            <Button x:Name="btnHome" Grid.Column="1" Template="{StaticResource btnTitleSelectedControlTemplate}" ContentTemplate="{StaticResource btnTitleContentTemplate}" />
+            <Button x:Name="btnSettings" Grid.Column="2" Template="{StaticResource btnTitleUnSelectedControlTemplate}" ContentTemplate="{StaticResource btnTitleContentTemplate}" Margin="3, 0" />
+            <Button x:Name="btnExit" Grid.Column="3" Template="{StaticResource btnTitleUnSelectedControlTemplate}" ContentTemplate="{StaticResource btnTitleContentTemplate}" Margin="0, 0, 5, 0" />
+        </Grid>
+        <!--内容选项卡-->
+        <dxd:DockLayoutManager x:Name="dockLayoutManager" DockPanel.Dock="Bottom" >
+            <dxd:LayoutGroup>
+                <dxd:LayoutGroup Orientation="Vertical" ItemWidth="3*" >
+                    <dxd:DocumentGroup x:Name="docGroup" ItemHeight="3*" ShowDropDownButton="False">
+                        <dxd:DocumentPanel x:Name="dpHome" Style="{StaticResource homeDocumentPanel}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="29"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <local:TitleControl Grid.Row="0" Grid.Column="0" Title="主功能菜单导航"  BorderThickness="0,0,1,1" />
+                                <local:TitleControl Grid.Row="0" Grid.Column="1" Title="{Binding MenuTitle}"  BorderThickness="0,0,0,1" />
+
+                                <!--左侧菜单-->
+                                <ListBox Grid.Column="0" Grid.Row="1" x:Name="lstboxLeftMenu" Style="{StaticResource menuLeft}" ItemsSource="{Binding MenuList}" SelectedItem="{Binding SelectedMenu}" SelectedIndex="0" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="SelectionChanged">
+                                            <i:InvokeCommandAction Command="{Binding SelectedIndexChangedCommand}" CommandParameter="{Binding SelectedMenu}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </ListBox>
+
+                                <!--右侧菜单-->
+                                <ListBox Grid.Column="1" Grid.Row="1" x:Name="lstboxRightMenu" Style="{StaticResource menuRight}" ItemsSource="{Binding MenuList}" SelectedItem="{Binding SelectedMenu}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="SelectedIndexChanged">
+                                            <i:InvokeCommandAction Command="{Binding SelectedIndexChangedCommand}" CommandParameter="{Binding SelectedMenu}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </ListBox>
+
+                                <!--<dxe:ListBoxEdit Grid.Column="0" Grid.Row="1" x:Name="lstboxLeftMenu" Style="{StaticResource menuLeft}" ItemsSource="{Binding MenuList}" SelectedItem="{Binding SelectedMenu}" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="SelectedIndexChanged">
+                                            <i:InvokeCommandAction Command="{Binding SelectedIndexChangedCommand}" CommandParameter="{Binding SelectedMenu}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </dxe:ListBoxEdit>-->
+                                <!--<dxe:ListBoxEdit Grid.Column="1" Grid.Row="1" x:Name="lstboxRightMenu" Style="{StaticResource menuRight}" ItemsSource="{Binding MenuList}" SelectedItem="{Binding SelectedMenu}" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="SelectedIndexChanged">
+                                            <i:InvokeCommandAction Command="{Binding SelectedIndexChangedCommand}" CommandParameter="{Binding SelectedMenu}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </dxe:ListBoxEdit>-->
+                            </Grid>
+                        </dxd:DocumentPanel>
+                    </dxd:DocumentGroup>
+                </dxd:LayoutGroup>
+                <dxd:TabbedGroup ItemWidth="*"/>
+            </dxd:LayoutGroup>
+        </dxd:DockLayoutManager>
+    </DockPanel>
+</dx:DXWindow>
