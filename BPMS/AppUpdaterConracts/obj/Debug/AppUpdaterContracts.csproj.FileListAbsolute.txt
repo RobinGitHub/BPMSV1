@@ -1,0 +1,5 @@
+E:\Robin\Desktop\BPMS\AppUpdaterConracts\bin\Debug\AppUpdaterContracts.dll.config
+E:\Robin\Desktop\BPMS\AppUpdaterConracts\bin\Debug\AppUpdaterContracts.dll
+E:\Robin\Desktop\BPMS\AppUpdaterConracts\bin\Debug\AppUpdaterContracts.pdb
+E:\Robin\Desktop\BPMS\AppUpdaterConracts\obj\Debug\AppUpdaterContracts.dll
+E:\Robin\Desktop\BPMS\AppUpdaterConracts\obj\Debug\AppUpdaterContracts.pdb
