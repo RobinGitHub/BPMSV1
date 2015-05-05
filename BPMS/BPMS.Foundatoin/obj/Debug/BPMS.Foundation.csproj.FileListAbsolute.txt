@@ -1,0 +1,5 @@
+E:\Robin\Desktop\BPMS\BPMS.Foundatoin\bin\Debug\BPMS.Foundatoin.dll
+E:\Robin\Desktop\BPMS\BPMS.Foundatoin\bin\Debug\BPMS.Foundatoin.pdb
+E:\Robin\Desktop\BPMS\BPMS.Foundatoin\obj\Debug\BPMS.Foundation.csprojResolveAssemblyReference.cache
+E:\Robin\Desktop\BPMS\BPMS.Foundatoin\obj\Debug\BPMS.Foundatoin.dll
+E:\Robin\Desktop\BPMS\BPMS.Foundatoin\obj\Debug\BPMS.Foundatoin.pdb
