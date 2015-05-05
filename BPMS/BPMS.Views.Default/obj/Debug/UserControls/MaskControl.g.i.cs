@@ -9,7 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using DevExpress.Xpf.Carousel;
 using System;
 using System.Diagnostics;
 using System.Windows;

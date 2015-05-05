@@ -30,11 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BPMS.Common">
+    <Reference Include="BPMS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BPMS.Common\bin\Debug\BPMS.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="BPMS.Model">
-      <HintPath>..\BPMS.Model\bin\Debug\BPMS.Model.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -60,6 +58,10 @@
     <ProjectReference Include="..\BPMS.Foundatoin\BPMS.Foundation.csproj">
       <Project>{5ee870d9-6d3c-46aa-a327-77f4f776389a}</Project>
       <Name>BPMS.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BPMS.Model\BPMS.Model.csproj">
+      <Project>{afe41757-1ba4-426c-a4a5-b25768b57a08}</Project>
+      <Name>BPMS.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\BPMS.References\BPMS.References.csproj">
       <Project>{cc11422e-55fc-400f-8f78-ee07514f4a86}</Project>

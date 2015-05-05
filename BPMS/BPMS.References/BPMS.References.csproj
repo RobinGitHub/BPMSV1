@@ -38,11 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CommonLibrary\Apache.NMS.ActiveMQ.dll</HintPath>
     </Reference>
-    <Reference Include="BPMS.Common">
+    <Reference Include="BPMS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BPMS.Common\bin\Debug\BPMS.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="BPMS.Model">
-      <HintPath>..\BPMS.Model\bin\Debug\BPMS.Model.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -118,6 +116,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BPMS.Model\BPMS.Model.csproj">
+      <Project>{afe41757-1ba4-426c-a4a5-b25768b57a08}</Project>
+      <Name>BPMS.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
