@@ -2,11 +2,9 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 10/25/2014 14:26:30
--- Generated from EDMX file: E:\Robin\Desktop\BPMS\BPMS.Model\Model.edmx
+-- Date Created: 05/08/2015 23:06:29
+-- Generated from EDMX file: E:\Robin\Documents\GitHub\BPMSV1\BPMS\BPMS.Model\Model.edmx
 -- --------------------------------------------------
-CREATE DATABASE [BPMS]
-
 
 SET QUOTED_IDENTIFIER OFF;
 GO
