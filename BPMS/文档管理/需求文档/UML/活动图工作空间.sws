@@ -5,8 +5,9 @@
 <Workspace>
 	<Local Expanded="Yes">
 		<Model ID="{9430FAEA-AE08-42B5-B973-D41DCED6B7BA}" Name="登录" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="登录.oom"/>
-		<Model ID="{D1853C48-ABF0-4A40-8AE9-015E5EBC2E21}" Name="系统管理" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="系统管理.oom"/>
-		<Model ID="{F8EC06EF-338B-4961-8540-7F9CADA80C10}" Name="BPMS" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="../../SQL-重新整理/BPMS.pdm"/>
+		<Model ID="{D1853C48-ABF0-4A40-8AE9-015E5EBC2E21}" Loaded="No" Name="系统管理" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="系统管理.oom"/>
+		<Model ID="{F8EC06EF-338B-4961-8540-7F9CADA80C10}" Loaded="No" Name="BPMS" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="../../SQL-重新整理/BPMS.pdm"/>
+		<Model Expanded="Yes" ID="{EE3FC9CE-C2B9-4696-B712-71C07B71685C}" Name="主界面" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="主界面.oom"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

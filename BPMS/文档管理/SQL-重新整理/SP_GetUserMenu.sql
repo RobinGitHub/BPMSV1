@@ -7,7 +7,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-alter PROCEDURE SP_GetUserMenu
+create PROCEDURE SP_GetUserMenu
 	@systemId int,
 	@userId int
 AS

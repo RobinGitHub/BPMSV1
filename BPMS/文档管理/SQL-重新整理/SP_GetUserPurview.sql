@@ -7,7 +7,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,获取一个系统下的某一个角色权限,>
 -- =============================================
-alter PROCEDURE SP_GetUserPurview
+create PROCEDURE SP_GetUserPurview
 	@systemId int,
 	@userId int
 AS
