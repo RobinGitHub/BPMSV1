@@ -1,406 +1,368 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BPMSModelStoreContainer" CdmEntityContainer="BPMSEntities">
-    <FunctionImportMapping FunctionImportName="GetNewID" FunctionName="BPMSModel.Store.GetNewID" />
-    <FunctionImportMapping FunctionImportName="SP_GetUserMenu" FunctionName="BPMSModel.Store.SP_GetUserMenu">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="BPMSModel.SP_GetUserMenu_Result">
-          <ScalarProperty Name="systemID" ColumnName="systemID" />
-          <ScalarProperty Name="systemCode" ColumnName="systemCode" />
-          <ScalarProperty Name="roleID" ColumnName="roleID" />
-          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
-          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Category" ColumnName="Category" />
-          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
-          <ScalarProperty Name="Icon" ColumnName="Icon" />
-          <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
-          <ScalarProperty Name="NavigateUrl" ColumnName="NavigateUrl" />
-          <ScalarProperty Name="FormName" ColumnName="FormName" />
-          <ScalarProperty Name="IsSplit" ColumnName="IsSplit" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="SP_GetUserPurview" FunctionName="BPMSModel.Store.SP_GetUserPurview">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="BPMSModel.SP_GetUserPurview_Result">
-          <ScalarProperty Name="systemID" ColumnName="systemID" />
-          <ScalarProperty Name="systemCode" ColumnName="systemCode" />
-          <ScalarProperty Name="roleID" ColumnName="roleID" />
-          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
-          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-          <ScalarProperty Name="PurviewType" ColumnName="PurviewType" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <EntitySetMapping Name="DataDictionary">
-      <EntityTypeMapping TypeName="BPMSModel.DataDictionary">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.DataDictionary)">
         <MappingFragment StoreEntitySet="DataDictionary">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="AllowDelete" ColumnName="AllowDelete" />
-          <ScalarProperty Name="AllowEdit" ColumnName="AllowEdit" />
-          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="DictType" ColumnName="DictType" />
-          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="DictType" ColumnName="DictType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="AllowEdit" ColumnName="AllowEdit" />
+          <ScalarProperty Name="AllowDelete" ColumnName="AllowDelete" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Employee">
-      <EntityTypeMapping TypeName="BPMSModel.Employee">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.Employee)">
         <MappingFragment StoreEntitySet="Employee">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="DimissionWhither" ColumnName="DimissionWhither" />
-          <ScalarProperty Name="DimissionCause" ColumnName="DimissionCause" />
-          <ScalarProperty Name="DimissionDate" ColumnName="DimissionDate" />
-          <ScalarProperty Name="IsDimission" ColumnName="IsDimission" />
-          <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
-          <ScalarProperty Name="Competency" ColumnName="Competency" />
-          <ScalarProperty Name="WorkingPropertyId" ColumnName="WorkingPropertyId" />
-          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
-          <ScalarProperty Name="NationId" ColumnName="NationId" />
-          <ScalarProperty Name="PartyId" ColumnName="PartyId" />
-          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
-          <ScalarProperty Name="Area" ColumnName="Area" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="Province" ColumnName="Province" />
-          <ScalarProperty Name="HomeFax" ColumnName="HomeFax" />
-          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
-          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
-          <ScalarProperty Name="HomeZipCode" ColumnName="HomeZipCode" />
-          <ScalarProperty Name="JoinInDate" ColumnName="JoinInDate" />
-          <ScalarProperty Name="WorkingDate" ColumnName="WorkingDate" />
-          <ScalarProperty Name="TitleLevelId" ColumnName="TitleLevelId" />
-          <ScalarProperty Name="TitleDate" ColumnName="TitleDate" />
-          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
-          <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
-          <ScalarProperty Name="Major" ColumnName="Major" />
-          <ScalarProperty Name="GraduationDate" ColumnName="GraduationDate" />
-          <ScalarProperty Name="School" ColumnName="School" />
-          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
-          <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
-          <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
-          <ScalarProperty Name="OfficeZipCode" ColumnName="OfficeZipCode" />
-          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
-          <ScalarProperty Name="OICQ" ColumnName="OICQ" />
-          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-          <ScalarProperty Name="ShortNumber" ColumnName="ShortNumber" />
-          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
-          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
-          <ScalarProperty Name="DutyId" ColumnName="DutyId" />
-          <ScalarProperty Name="WorkgroupId" ColumnName="WorkgroupId" />
-          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="SubCompanyId" ColumnName="SubCompanyId" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
-          <ScalarProperty Name="Age" ColumnName="Age" />
-          <ScalarProperty Name="Alias" ColumnName="Alias" />
-          <ScalarProperty Name="Spell" ColumnName="Spell" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Spell" ColumnName="Spell" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="SubCompanyId" ColumnName="SubCompanyId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="WorkgroupId" ColumnName="WorkgroupId" />
+          <ScalarProperty Name="DutyId" ColumnName="DutyId" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="ShortNumber" ColumnName="ShortNumber" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="OICQ" ColumnName="OICQ" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="OfficeZipCode" ColumnName="OfficeZipCode" />
+          <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+          <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="GraduationDate" ColumnName="GraduationDate" />
+          <ScalarProperty Name="Major" ColumnName="Major" />
+          <ScalarProperty Name="DegreeId" ColumnName="DegreeId" />
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="TitleDate" ColumnName="TitleDate" />
+          <ScalarProperty Name="TitleLevelId" ColumnName="TitleLevelId" />
+          <ScalarProperty Name="WorkingDate" ColumnName="WorkingDate" />
+          <ScalarProperty Name="JoinInDate" ColumnName="JoinInDate" />
+          <ScalarProperty Name="HomeZipCode" ColumnName="HomeZipCode" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="HomeFax" ColumnName="HomeFax" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="PartyId" ColumnName="PartyId" />
+          <ScalarProperty Name="NationId" ColumnName="NationId" />
+          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+          <ScalarProperty Name="WorkingPropertyId" ColumnName="WorkingPropertyId" />
+          <ScalarProperty Name="Competency" ColumnName="Competency" />
+          <ScalarProperty Name="EmergencyContact" ColumnName="EmergencyContact" />
+          <ScalarProperty Name="IsDimission" ColumnName="IsDimission" />
+          <ScalarProperty Name="DimissionDate" ColumnName="DimissionDate" />
+          <ScalarProperty Name="DimissionCause" ColumnName="DimissionCause" />
+          <ScalarProperty Name="DimissionWhither" ColumnName="DimissionWhither" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="IPBlacklist">
-      <EntityTypeMapping TypeName="BPMSModel.IPBlacklist">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.IPBlacklist)">
         <MappingFragment StoreEntitySet="IPBlacklist">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="Failuretime" ColumnName="Failuretime" />
-          <ScalarProperty Name="EndIp" ColumnName="EndIp" />
-          <ScalarProperty Name="StartIp" ColumnName="StartIp" />
-          <ScalarProperty Name="Category" ColumnName="Category" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="StartIp" ColumnName="StartIp" />
+          <ScalarProperty Name="EndIp" ColumnName="EndIp" />
+          <ScalarProperty Name="Failuretime" ColumnName="Failuretime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MenuInfo">
-      <EntityTypeMapping TypeName="BPMSModel.MenuInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.MenuInfo)">
         <MappingFragment StoreEntitySet="MenuInfo">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="IsSplit" ColumnName="IsSplit" />
-          <ScalarProperty Name="FormName" ColumnName="FormName" />
-          <ScalarProperty Name="NavigateUrl" ColumnName="NavigateUrl" />
-          <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
-          <ScalarProperty Name="Icon" ColumnName="Icon" />
-          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
-          <ScalarProperty Name="Category" ColumnName="Category" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
+          <ScalarProperty Name="NavigateUrl" ColumnName="NavigateUrl" />
+          <ScalarProperty Name="FormName" ColumnName="FormName" />
+          <ScalarProperty Name="IsSplit" ColumnName="IsSplit" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Organization">
-      <EntityTypeMapping TypeName="BPMSModel.Organization">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.Organization)">
         <MappingFragment StoreEntitySet="Organization">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="Web" ColumnName="Web" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
-          <ScalarProperty Name="Fax" ColumnName="Fax" />
-          <ScalarProperty Name="InnerPhone" ColumnName="InnerPhone" />
-          <ScalarProperty Name="OuterPhone" ColumnName="OuterPhone" />
-          <ScalarProperty Name="AssistantManager" ColumnName="AssistantManager" />
-          <ScalarProperty Name="Manager" ColumnName="Manager" />
-          <ScalarProperty Name="Category" ColumnName="Category" />
-          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
-          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="AssistantManager" ColumnName="AssistantManager" />
+          <ScalarProperty Name="OuterPhone" ColumnName="OuterPhone" />
+          <ScalarProperty Name="InnerPhone" ColumnName="InnerPhone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Postalcode" ColumnName="Postalcode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PurviewInfo">
-      <EntityTypeMapping TypeName="BPMSModel.PurviewInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.PurviewInfo)">
         <MappingFragment StoreEntitySet="PurviewInfo">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="PurviewType" ColumnName="PurviewType" />
-          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="PurviewType" ColumnName="PurviewType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RoleInfo">
-      <EntityTypeMapping TypeName="BPMSModel.RoleInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.RoleInfo)">
         <MappingFragment StoreEntitySet="RoleInfo">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="Category" ColumnName="Category" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RolePurview">
-      <EntityTypeMapping TypeName="BPMSModel.RolePurview">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.RolePurview)">
         <MappingFragment StoreEntitySet="RolePurview">
-          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SysLogDetails">
-      <EntityTypeMapping TypeName="BPMSModel.SysLogDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.SysLogDetails)">
         <MappingFragment StoreEntitySet="SysLogDetails">
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="OldValue" ColumnName="OldValue" />
-          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
-          <ScalarProperty Name="FieldText" ColumnName="FieldText" />
-          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
-          <ScalarProperty Name="SyslogId" ColumnName="SyslogId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SyslogId" ColumnName="SyslogId" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="FieldText" ColumnName="FieldText" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+          <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SysLoginLog">
-      <EntityTypeMapping TypeName="BPMSModel.SysLoginLog">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.SysLoginLog)">
         <MappingFragment StoreEntitySet="SysLoginLog">
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="IPAddressName" ColumnName="IPAddressName" />
-          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="Account" ColumnName="Account" />
-          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="IPAddressName" ColumnName="IPAddressName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SystemExceptionLog">
-      <EntityTypeMapping TypeName="BPMSModel.SystemExceptionLog">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.SystemExceptionLog)">
         <MappingFragment StoreEntitySet="SystemExceptionLog">
-          <ScalarProperty Name="IPAddressName" ColumnName="IPAddressName" />
-          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Exception" ColumnName="Exception" />
-          <ScalarProperty Name="Source" ColumnName="Source" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="IPAddressName" ColumnName="IPAddressName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SystemInfo">
-      <EntityTypeMapping TypeName="BPMSModel.SystemInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.SystemInfo)">
         <MappingFragment StoreEntitySet="SystemInfo">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TableId">
-      <EntityTypeMapping TypeName="BPMSModel.TableId">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.TableId)">
         <MappingFragment StoreEntitySet="TableId">
-          <ScalarProperty Name="CurrentId" ColumnName="CurrentId" />
-          <ScalarProperty Name="TableName" ColumnName="TableName" />
-          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="CurrentId" ColumnName="CurrentId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserInfo">
-      <EntityTypeMapping TypeName="BPMSModel.UserInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.UserInfo)">
         <MappingFragment StoreEntitySet="UserInfo">
-          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
-          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
-          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
-          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
-          <ScalarProperty Name="PreviousVisit" ColumnName="PreviousVisit" />
-          <ScalarProperty Name="FirstVisit" ColumnName="FirstVisit" />
-          <ScalarProperty Name="LogOnCount" ColumnName="LogOnCount" />
-          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
-          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
-          <ScalarProperty Name="ChangePasswordDate" ColumnName="ChangePasswordDate" />
-          <ScalarProperty Name="WorkgroupId" ColumnName="WorkgroupId" />
-          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
-          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
-          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
-          <ScalarProperty Name="DutyId" ColumnName="DutyId" />
-          <ScalarProperty Name="OICQ" ColumnName="OICQ" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
-          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="Alias" ColumnName="Alias" />
-          <ScalarProperty Name="Spell" ColumnName="Spell" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Account" ColumnName="Account" />
-          <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Spell" ColumnName="Spell" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OICQ" ColumnName="OICQ" />
+          <ScalarProperty Name="DutyId" ColumnName="DutyId" />
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="WorkgroupId" ColumnName="WorkgroupId" />
+          <ScalarProperty Name="ChangePasswordDate" ColumnName="ChangePasswordDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+          <ScalarProperty Name="LogOnCount" ColumnName="LogOnCount" />
+          <ScalarProperty Name="FirstVisit" ColumnName="FirstVisit" />
+          <ScalarProperty Name="PreviousVisit" ColumnName="PreviousVisit" />
+          <ScalarProperty Name="LastVisit" ColumnName="LastVisit" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+          <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+          <ScalarProperty Name="ModifyUserName" ColumnName="ModifyUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserPurview">
-      <EntityTypeMapping TypeName="BPMSModel.UserPurview">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.UserPurview)">
         <MappingFragment StoreEntitySet="UserPurview">
-          <ScalarProperty Name="HasRight" ColumnName="HasRight" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PurviewId" ColumnName="PurviewId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="HasRight" ColumnName="HasRight" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserRole">
-      <EntityTypeMapping TypeName="BPMSModel.UserRole">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.UserRole)">
         <MappingFragment StoreEntitySet="UserRole">
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SysLog">
-      <EntityTypeMapping TypeName="BPMSModel.SysLog">
+      <EntityTypeMapping TypeName="IsTypeOf(BPMSModel.SysLog)">
         <MappingFragment StoreEntitySet="SysLog">
-          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
-          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
-          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="IPAddressName" ColumnName="IPAddressName" />
-          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
-          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
-          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
-          <ScalarProperty Name="TableName" ColumnName="TableName" />
-          <ScalarProperty Name="OperationType" ColumnName="OperationType" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OperationType" ColumnName="OperationType" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="IPAddressName" ColumnName="IPAddressName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateUserName" ColumnName="CreateUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

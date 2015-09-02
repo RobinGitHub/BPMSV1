@@ -15,7 +15,7 @@ namespace BPMS.Services
         public string DataDictGetList(string xmlCredentials, int systemId, int dictType)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Vie) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Vie) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             DataTable rltDt = this.BLLProvider.DataDictionaryBLL.GetList(objCredentials.UserId, objCredentials.UserName, systemId, dictType);
             return ZipHelper.CompressDataTable(rltDt);
@@ -29,7 +29,7 @@ namespace BPMS.Services
         public string DataDictGetModel(string xmlCredentials, int id)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Vie) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Vie) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             return this.BLLProvider.DataDictionaryBLL.GetModel(id).ToXmlString();
         }
@@ -42,7 +42,7 @@ namespace BPMS.Services
         public int DataDictAdd(string xmlCredentials, string xmlModel)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Add) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Add) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             var model = xmlModel.ToModel<DataDictionary>();
             model.CreateUserId = objCredentials.UserId;
@@ -62,7 +62,7 @@ namespace BPMS.Services
         public int DataDictEdit(string xmlCredentials, string xmlModel)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Upd) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Upd) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             var model = xmlModel.ToModel<DataDictionary>();
             model.ModifyDate = DateTime.Now;
@@ -79,7 +79,7 @@ namespace BPMS.Services
         public int DataDictDelete(string xmlCredentials, int id)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Del) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Del) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             return this.BLLProvider.DataDictionaryBLL.Delete(objCredentials.UserId, objCredentials.UserName, id);
         }
@@ -93,7 +93,7 @@ namespace BPMS.Services
         public bool DataDictNameIsRepeat(string xmlCredentials, int dictType, string name, int id)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Vie) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Vie) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             return this.BLLProvider.DataDictionaryBLL.IsRepeatName(dictType, name, id);
         }
@@ -107,7 +107,7 @@ namespace BPMS.Services
         public bool DataDictCodeIsRepeat(string xmlCredentials, int dictType, string code, int id)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.DataDictMng, EActions.Vie) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.DataDictMng, EActions.Vie) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             return this.BLLProvider.DataDictionaryBLL.IsRepeatCode(dictType, code, id);
         }

@@ -34,13 +34,13 @@ namespace BPMS.Model
     {
         UnKnow,
         /// <summary>
-        /// 组织架构管理
+        /// 权限应用
         /// </summary>
-        OrganizationMng,
+        PurviewApply,
         /// <summary>
-        /// 系统管理
+        /// 系统应用
         /// </summary>
-        SystemMng,
+        SystemApply,
     }
     #endregion
 
@@ -77,6 +77,13 @@ namespace BPMS.Model
         /// </summary>
         DatabaseMng,
         /// <summary>
+        /// 用户访问控制
+        /// </summary>
+        IPBlackMng,
+        #endregion
+
+        #region 权限应用
+        /// <summary>
         /// 系统管理
         /// </summary>
         SystemMng,
@@ -108,13 +115,6 @@ namespace BPMS.Model
         /// 菜单管理
         /// </summary>
         MenuMng,
-        /// <summary>
-        /// 用户访问控制
-        /// </summary>
-        IPBlackMng,
-        #endregion
-
-        #region 权限应用
         
         /// <summary>
         /// 员工管理

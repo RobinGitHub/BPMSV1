@@ -13,7 +13,7 @@ namespace BPMS.Services
         public string SysLoginLogGetList(string xmlCredentials, DateTime startDate, DateTime endDate, string account, int pageIndex, int pageSize, out int count)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.LoginLogMng, EActions.Vie) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.LoginLogMng, EActions.Vie) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             DataTable dtRlt = this.BLLProvider.SysLoginLogBLL.GetList(objCredentials.UserId, objCredentials.UserName, startDate, endDate, objCredentials.SystemId, account, pageIndex, pageSize, out count);
             return ZipHelper.CompressDataTable(dtRlt);
@@ -27,7 +27,7 @@ namespace BPMS.Services
         public bool SysLoginLogClear(string xmlCredentials, DateTime endDate)
         {
             ClientCredentials objCredentials = xmlCredentials.ToModel<ClientCredentials>();
-            if (CheckPurview(objCredentials, EModules.SystemMng, EFunctions.LoginLogMng, EActions.Del) != 1)
+            if (CheckPurview(objCredentials, EModules.SystemApply, EFunctions.LoginLogMng, EActions.Del) != 1)
                 throw new Exception(String.Format("Service Method:{0} Access Error", base.GetActionName()));
             return this.BLLProvider.SysLoginLogBLL.Delete(objCredentials.UserId, objCredentials.UserName, objCredentials.SystemId, endDate) > 0;
         }
